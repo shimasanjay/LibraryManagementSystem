@@ -1,25 +1,45 @@
-# Library Management System (Java + MySQL)
+# 📚 Library Management System (Java + MySQL)
 
-A simple Java Swing-based application to manage library books using a MySQL database.
+A simple Java Swing-based application for managing books in a library using a MySQL database.
 
-## Features
-- Add, view, edit, delete book records
-- Connects to MySQL (`library_db`) using JDBC
-- GUI built using `Swing`
+---
 
-## Screenshot
-### Main Interface
-![UI](library_ui_form.png)
+## ✨ Features
 
-### Book List Output
+- Add new books  
+- View all books  
+- Edit book details  
+- Delete a book record  
+- Clear input fields  
+- Exit the application
+
+---
+
+## 🖼️ Screenshots
+
+### 🪟 Main GUI  
+![Library UI](library_ui_form.png)
+
+### 📋 Book List (Displayed via JOptionPane)  
 ![Books List](library_books_list.png)
 
-## Database Details
+### 🧾 MySQL Data in `books` Table  
+![Books Table Data](books_table_data.png)
 
-**Table:** `books`
+### 🗃️ Tables inside `library_db`  
+![Library DB Tables](library_db_tables.png)
+
+---
+
+## 🗃️ Database Schema (MySQL)
+
+Use the SQL below to create your `books` table:
 
 ```sql
-CREATE TABLE books (
+CREATE DATABASE IF NOT EXISTS library_db;
+USE library_db;
+
+CREATE TABLE IF NOT EXISTS books (
   book_id INT PRIMARY KEY,
   book_title VARCHAR(100),
   author VARCHAR(100),
